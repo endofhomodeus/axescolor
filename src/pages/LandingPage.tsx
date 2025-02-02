@@ -10,12 +10,11 @@ import {
   Sparkles,
   Heart
 } from 'lucide-react';
-import { Helmet } from 'react-helmet'; // SEO için ekleyelim
+import { Helmet } from 'react-helmet'; 
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
   
-  // Mouse tracking ve activeCard state'leri kaldırıldı
   
   const tools = [
     {
@@ -60,7 +59,6 @@ const LandingPage: React.FC = () => {
     }
   ];
 
-  // Yeni özellikler listesi
   const features = [
     {
       icon: <Sparkles className="w-6 h-6" />,
@@ -79,7 +77,6 @@ const LandingPage: React.FC = () => {
     }
   ];
 
-  // Yeni özellik bölümleri için statik veriler
   const statistics = [
     { number: "10K+", label: "Daily Active Users" },
     { number: "50K+", label: "Generated Palettes" },
@@ -225,7 +222,7 @@ const LandingPage: React.FC = () => {
                            shadow-lg hover:shadow-xl
                            transition-shadow
                            backdrop-blur-sm
-                           h-[320px] flex flex-col justify-between items-center"
+                           min-h-[320px] flex flex-col justify-between items-center"
                 >
                   <div className="relative z-10 flex flex-col items-center h-full w-full">
                     {/* Icon container */}
@@ -241,11 +238,11 @@ const LandingPage: React.FC = () => {
                     </div>
                     
                     {/* Content container - Fixed height for consistent title positioning */}
-                    <div className="flex flex-col items-center h-[160px]">
+                    <div className="flex flex-col items-center flex-grow my-4">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-200">
                         {tool.title}
                       </h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 text-center mb-4">
                         {tool.description}
                       </p>
                     </div>
@@ -271,7 +268,7 @@ const LandingPage: React.FC = () => {
                            shadow-lg hover:shadow-xl
                            transition-shadow
                            backdrop-blur-sm
-                           h-[320px] flex flex-col justify-between items-center"
+                           min-h-[320px] flex flex-col justify-between items-center"
                 >
                   <div className="relative z-10 flex flex-col items-center h-full w-full">
                     {/* Icon container */}
@@ -287,11 +284,11 @@ const LandingPage: React.FC = () => {
                     </div>
                     
                     {/* Content container - Fixed height for consistent title positioning */}
-                    <div className="flex flex-col items-center h-[160px]">
+                    <div className="flex flex-col items-center flex-grow my-4">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-200">
                         {tool.title}
                       </h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 text-center mb-4">
                         {tool.description}
                       </p>
                     </div>
@@ -389,25 +386,27 @@ const LandingPage: React.FC = () => {
                     key={index} 
                     className="p-8 bg-white/80 dark:bg-gray-800/80 rounded-2xl backdrop-blur-sm 
                                border-2 border-gray-300 dark:border-gray-600
-                               relative flex flex-col h-[280px]"
+                               relative flex flex-col min-h-[280px]"
                   >
                     <span className="absolute top-4 left-4 text-4xl text-gray-200 dark:text-gray-700 font-serif select-none">
                       &ldquo;
                     </span>
-                    <div className="relative flex-1 flex flex-col"> {/* flex-1 ve flex-col ekledik */}
-                      <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg italic flex-1"> {/* flex-1 ekledik */}
+                    <div className="relative flex flex-col flex-grow">
+                      <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg italic">
                         {testimonial.quote}
                       </p>
-                      <div className="flex items-center gap-3 pt-4 border-t border-gray-100 dark:border-gray-700"> {/* border ekledik */}
-                        <div className="h-10 w-10 rounded-full bg-gradient-to-r from-rose-400 to-blue-400 flex items-center justify-center text-white font-medium">
-                          {testimonial.author[0]}
-                        </div>
-                        <div>
-                          <div className="font-medium text-gray-900 dark:text-white">
-                            {testimonial.author}
+                      <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-3">
+                          <div className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-r from-rose-400 to-blue-400 flex items-center justify-center text-white font-medium">
+                            {testimonial.author[0]}
                           </div>
-                          <div className="text-sm text-gray-500 dark:text-gray-400">
-                            {testimonial.role}
+                          <div className="min-w-0 flex-1">
+                            <div className="font-medium text-gray-900 dark:text-white truncate">
+                              {testimonial.author}
+                            </div>
+                            <div className="text-sm text-gray-500 dark:text-gray-400 truncate">
+                              {testimonial.role}
+                            </div>
                           </div>
                         </div>
                       </div>

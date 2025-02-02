@@ -13,10 +13,10 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
 
   const navLinks = [
     { path: '/landing', label: 'Home' },
-    { path: '/image-picker', label: 'Image Color Generator' },
+    { path: '/image-picker', label: 'Photo to Palette' },
     { path: '/palette-generator', label: 'Color Palettes' },
     { path: '/explore', label: 'Hue Wheel' },
-    { path: '/color-picker', label: 'Color Screen Picker' },
+    { path: '/color-picker', label: 'Pixel Grabber' },
     { path: '/pattern-maker', label: 'Pattern Creator' },
   ];
 
@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`relative px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ease-in-out
+                  className={`relative px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 ease-in-out
                     ${location.pathname === link.path 
                       ? 'bg-gradient-to-r from-rose-50/90 to-blue-50/90 dark:from-rose-900/30 dark:to-blue-900/30' 
                       : 'hover:bg-gradient-to-r hover:from-rose-50/60 hover:to-blue-50/60 dark:hover:from-rose-900/20 dark:hover:to-blue-900/20'
@@ -67,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                     ${location.pathname === link.path 
                       ? 'bg-gradient-to-r from-rose-500 to-blue-800 dark:from-rose-300 dark:to-blue-400 bg-clip-text text-transparent' 
                       : 'text-gray-700 dark:text-gray-200 group-hover:bg-gradient-to-r group-hover:from-rose-500 group-hover:to-blue-800 dark:group-hover:from-rose-300 dark:group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent'
-                    } transition-all duration-200
+                    } transition-all duration-200 font-bold
                   `}>
                     {link.label}
                   </span>
@@ -121,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                   ${location.pathname === link.path
                     ? 'bg-gradient-to-r from-rose-500 to-blue-800 dark:from-rose-300 dark:to-blue-400 bg-clip-text text-transparent' 
                     : 'text-gray-800 dark:text-gray-200'
-                  }
+                  } font-bold
                 `}>
                   {link.label}
                 </span>
