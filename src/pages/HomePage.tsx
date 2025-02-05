@@ -347,13 +347,13 @@ const HomePage: React.FC<HomePageProps> = () => {
         <title>Color Palette Generator - Extract Colors from Images | ColorGenerator</title>
         <meta name="description" content="Transform your images into beautiful color palettes. Free online tool for designers and artists to extract colors from images and create custom color schemes." />
         <meta name="keywords" content="color palette generator, color extraction, image colors, design tools, color schemes, color combinations" />
-        <link rel="canonical" href="https://yourdomain.com/" />
+        <link rel="canonical" href="https://axescolor.com/" />
         
         {/* Open Graph / Social Media Meta Tags */}
         <meta property="og:title" content="Color Palette Generator - Extract Colors from Images" />
         <meta property="og:description" content="Transform your images into beautiful color palettes. Extract colors from any image instantly." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/" />
+        <meta property="og:url" content="https://axescolor.com/" />
         {state.uploadedImage && <meta property="og:image" content={state.uploadedImage} />}
         
         {/* Twitter Card Meta Tags */}
@@ -361,6 +361,7 @@ const HomePage: React.FC<HomePageProps> = () => {
         <meta name="twitter:title" content="Color Palette Generator - Extract Colors from Images" />
         <meta name="twitter:description" content="Transform your images into beautiful color palettes. Extract colors from any image instantly." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 

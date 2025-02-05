@@ -127,6 +127,8 @@ const ComponentsPage: React.FC = () => {
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <link rel="canonical" href="/pattern-maker" />
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -142,7 +144,6 @@ const ComponentsPage: React.FC = () => {
             }
           })}
         </script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 
       <main role="main" className="min-h-screen w-full px-4 sm:px-6 py-4 sm:py-8">

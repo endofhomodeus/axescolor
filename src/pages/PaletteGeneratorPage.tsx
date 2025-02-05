@@ -396,6 +396,8 @@ const PaletteGeneratorPage: React.FC = () => {
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content="color palettes, color combinations, color schemes, design inspiration, color library" />
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
         
         {/* Open Graph Tags */}
         <meta property="og:title" content={pageTitle} />

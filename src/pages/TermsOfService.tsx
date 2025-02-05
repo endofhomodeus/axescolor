@@ -6,6 +6,7 @@ const TermsOfService: React.FC = () => {
     <>
       <Helmet>
         <title>Terms of Service - SPECTRAUX</title>
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
       <div className="max-w-3xl mx-auto py-12">

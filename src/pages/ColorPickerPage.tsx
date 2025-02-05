@@ -162,8 +162,10 @@ const ColorPickerPage: React.FC = () => {
         <meta property="og:description" content="Free online color picker tool. Easily pick colors from your screen and generate beautiful color harmonies." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/color-picker-preview.jpg" />
-        <link rel="canonical" href="https://yourdomain.com/color-picker" />
+        <link rel="canonical" href="https://axescolor.com/color-picker" />
         <meta name="robots" content="index, follow" />
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -179,7 +181,6 @@ const ColorPickerPage: React.FC = () => {
             }
           })}
         </script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 
       <main className="min-h-screen p-3 sm:p-4 md:p-8 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">

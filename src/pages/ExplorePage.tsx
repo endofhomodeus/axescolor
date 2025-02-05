@@ -86,6 +86,7 @@ const ExplorePage: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
         <meta property="og:description" content="Interactive color wheel and comprehensive color system guide for designers and developers." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 

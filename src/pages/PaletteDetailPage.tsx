@@ -322,6 +322,7 @@ const PaletteDetailPage: React.FC = () => {
     <>
       <Helmet>
         {/* ...existing code... */}
+        <meta name="google-adsense-account" content="ca-pub-9867578754430987" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
       <div className="min-h-screen p-4 sm:p-8 bg-white dark:bg-gray-900">
