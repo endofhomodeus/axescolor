@@ -361,6 +361,7 @@ const HomePage: React.FC<HomePageProps> = () => {
         <meta name="twitter:title" content="Color Palette Generator - Extract Colors from Images" />
         <meta name="twitter:description" content="Transform your images into beautiful color palettes. Extract colors from any image instantly." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">

@@ -142,6 +142,7 @@ const ComponentsPage: React.FC = () => {
             }
           })}
         </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 
       <main role="main" className="min-h-screen w-full px-4 sm:px-6 py-4 sm:py-8">

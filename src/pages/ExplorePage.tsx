@@ -86,6 +86,7 @@ const ExplorePage: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
         <meta property="og:description" content="Interactive color wheel and comprehensive color system guide for designers and developers." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
       </Helmet>
 
       <main className="relative min-h-[calc(100vh-208px)] w-full">
@@ -173,23 +174,23 @@ const ExplorePage: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="bg-white/90 dark:bg-gray-900/90 p-6 rounded-lg backdrop-blur-sm shadow-xl">
-                    <div className="flex items-center space-x-4 mb-6">
+                  <div className="bg-white/90 dark:bg-gray-900/90 p-4 sm:p-6 rounded-lg backdrop-blur-sm shadow-xl">
+                    <div className="flex items-center space-x-2 mb-6">
                       <input
                         type="text"
                         value={inputValue}
                         onChange={handleInputChange}
-                        className="flex-1 px-4 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        className="flex-1 px-3 py-1.5 text-sm border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-white"
                       />
                       <button
                         onClick={copyToClipboard}
-                        className="p-3 md:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95 transition-all touch-manipulation"
+                        className="p-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 active:scale-95 transition-all touch-manipulation"
                         aria-label={copied ? "Copied!" : "Copy color code"}
                       >
                         {copied ? (
-                          <Check className="h-6 w-6 md:h-5 md:w-5 text-green-500" />
+                          <Check className="h-5 w-5 text-green-500" />
                         ) : (
-                          <Copy className="h-6 w-6 md:h-5 md:w-5 text-gray-600 dark:text-white" />
+                          <Copy className="h-5 w-5 text-gray-600 dark:text-white" />
                         )}
                       </button>
                     </div>

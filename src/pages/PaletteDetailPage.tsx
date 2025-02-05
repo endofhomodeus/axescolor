@@ -4,6 +4,7 @@ import ColorPalette from '../components/ColorPalette';
 import { PREDEFINED_PALETTES } from '../data/palettes';
 import namer from 'color-namer';
 import { Check, Copy, ArrowLeft, Share2, Twitter, Facebook, Linkedin, Instagram, MoreHorizontal, X, Pin, MessageCircle, Send, Mail, Link2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 // Share menüsünü ayrı bir component olarak çıkaralım
 const ShareMenu = React.memo(({ isOpen, onClose, onShare, shareMenuRef }: {
@@ -318,141 +319,117 @@ const PaletteDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-4 sm:mb-8">
-          <Link 
-            to="/palette-generator"
-            className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 
-              bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700
-              text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white
-              border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600
-              shadow-sm hover:shadow group w-fit"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-            Back to Generator
-          </Link>
-        </div>
-
-        <h1 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900 dark:text-white">
-          {palette.name}
-        </h1>
-
-        <div className="mb-12 sm:mb-16">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800 dark:text-gray-200">
-            Suggested Palettes
-          </h2>
-
-          <div className="hidden sm:block">
-            <ColorPalette
-              colors={colorNamesCache}
-              gridCols={5}
-              smGridCols={5}
-              mdGridCols={5}
-              showName={true}
-              stretch={false}
-              className="suggested-palettes"
-            />
-          </div>
-
-          <div className="block sm:hidden">
-            <div className="grid grid-cols-2 gap-3">
-              {colorNamesCache.map((color, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-center gap-2 p-2 rounded-lg border border-gray-200 dark:border-gray-700 relative group"
-                  onClick={() => copyColor(color.hex)}
-                >
-                  <div 
-                    className="w-16 h-16 rounded-lg border border-gray-300 dark:border-gray-600 shrink-0 cursor-pointer transition-transform active:scale-95 relative"
-                    style={{ backgroundColor: color.hex }}
-                  >
-                    {copiedColor === color.hex && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-lg">
-                        <Check className="w-6 h-6 text-white" />
-                      </div>
-                    )}
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-medium text-gray-900 dark:text-white truncate">
-                      {color.name}
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      {color.hex}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-6 sm:mt-8 text-center">
-            <button 
-              onClick={copyAllColors}
-              className="group relative inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wide text-white transition-all duration-200 ease-in-out transform bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg hover:from-blue-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+    <>
+      <Helmet>
+        {/* ...existing code... */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9867578754430987" crossorigin="anonymous"></script>
+      </Helmet>
+      <div className="min-h-screen p-4 sm:p-8 bg-white dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-4 sm:mb-8">
+            <Link 
+              to="/palette-generator"
+              className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 
+                bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700
+                text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white
+                border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600
+                shadow-sm hover:shadow group w-fit"
             >
-              <span className="flex items-center">
-                Copy All Color Codes
-                {copied ? (
-                  <Check className="w-5 h-5 ml-2 transition-transform group-hover:scale-110" />
-                ) : (
-                  <Copy className="w-5 h-5 ml-2 transition-transform group-hover:scale-110" />
-                )}
-              </span>
-            </button>
-            <ShareMenu 
-              isOpen={showShareMenu}
-              onClose={() => setShowShareMenu(!showShareMenu)} // Burayı toggle olarak değiştiriyoruz
-              onShare={handleShare} 
-              shareMenuRef={shareMenuRef}
-            />
+              <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
+              Back to Generator
+            </Link>
           </div>
 
-          <div className="mt-8 sm:mt-12">
+          <h1 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900 dark:text-white">
+            {palette.name}
+          </h1>
+
+          <div className="mb-12 sm:mb-16">
             <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800 dark:text-gray-200">
-              Related Palettes
+              Suggested Palettes
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-              {relatedPalettes?.map((relatedPalette, index) => (
-                <Link
-                  key={index}
-                  to={`/palette/${category}/${relatedPalette.name}`}
-                  className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-300 dark:border-gray-700"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {relatedPalette.name}
-                  </h3>
-                  <div className="grid grid-cols-5 gap-1.5">
-                    {relatedPalette.colors.map((color, colorIndex) => (
-                      <div
-                        key={colorIndex}
-                        className="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-700"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                    ))}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
 
-          {sharedTagPalettes.length > 0 && (
+            <div className="hidden sm:block">
+              <ColorPalette
+                colors={colorNamesCache}
+                gridCols={5}
+                smGridCols={5}
+                mdGridCols={5}
+                showName={true}
+                stretch={false}
+                className="suggested-palettes"
+              />
+            </div>
+
+            <div className="block sm:hidden">
+              <div className="grid grid-cols-2 gap-3">
+                {colorNamesCache.map((color, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-center gap-2 p-2 rounded-lg border border-gray-200 dark:border-gray-700 relative group"
+                    onClick={() => copyColor(color.hex)}
+                  >
+                    <div 
+                      className="w-16 h-16 rounded-lg border border-gray-300 dark:border-gray-600 shrink-0 cursor-pointer transition-transform active:scale-95 relative"
+                      style={{ backgroundColor: color.hex }}
+                    >
+                      {copiedColor === color.hex && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-lg">
+                          <Check className="w-6 h-6 text-white" />
+                        </div>
+                      )}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium text-gray-900 dark:text-white truncate">
+                        {color.name}
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                        {color.hex}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 sm:mt-8 text-center">
+              <button 
+                onClick={copyAllColors}
+                className="group relative inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wide text-white transition-all duration-200 ease-in-out transform bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg hover:from-blue-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                <span className="flex items-center">
+                  Copy All Color Codes
+                  {copied ? (
+                    <Check className="w-5 h-5 ml-2 transition-transform group-hover:scale-110" />
+                  ) : (
+                    <Copy className="w-5 h-5 ml-2 transition-transform group-hover:scale-110" />
+                  )}
+                </span>
+              </button>
+              <ShareMenu 
+                isOpen={showShareMenu}
+                onClose={() => setShowShareMenu(!showShareMenu)} // Burayı toggle olarak değiştiriyoruz
+                onShare={handleShare} 
+                shareMenuRef={shareMenuRef}
+              />
+            </div>
+
             <div className="mt-8 sm:mt-12">
               <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800 dark:text-gray-200">
-                Other Palettes with Shared Tags
+                Related Palettes
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                {sharedTagPalettes.map((sharedPalette, index) => (
+                {relatedPalettes?.map((relatedPalette, index) => (
                   <Link
                     key={index}
-                    to={`/palette/${sharedPalette.category}/${sharedPalette.name}`}
+                    to={`/palette/${category}/${relatedPalette.name}`}
                     className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-300 dark:border-gray-700"
                   >
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      {sharedPalette.name}
+                      {relatedPalette.name}
                     </h3>
                     <div className="grid grid-cols-5 gap-1.5">
-                      {sharedPalette.colors.map((color, colorIndex) => (
+                      {relatedPalette.colors.map((color, colorIndex) => (
                         <div
                           key={colorIndex}
                           className="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-700"
@@ -464,10 +441,40 @@ const PaletteDetailPage: React.FC = () => {
                 ))}
               </div>
             </div>
-          )}
+
+            {sharedTagPalettes.length > 0 && (
+              <div className="mt-8 sm:mt-12">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800 dark:text-gray-200">
+                  Other Palettes with Shared Tags
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                  {sharedTagPalettes.map((sharedPalette, index) => (
+                    <Link
+                      key={index}
+                      to={`/palette/${sharedPalette.category}/${sharedPalette.name}`}
+                      className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-300 dark:border-gray-700"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        {sharedPalette.name}
+                      </h3>
+                      <div className="grid grid-cols-5 gap-1.5">
+                        {sharedPalette.colors.map((color, colorIndex) => (
+                          <div
+                            key={colorIndex}
+                            className="w-full h-12 rounded-lg border border-gray-300 dark:border-gray-700"
+                            style={{ backgroundColor: color }}
+                          ></div>
+                        ))}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
