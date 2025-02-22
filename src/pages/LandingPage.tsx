@@ -78,8 +78,8 @@ const LandingPage: React.FC = () => {
   ];
 
   const statistics = [
-    { number: "10K+", label: "Daily Active Users" },
-    { number: "50K+", label: "Generated Palettes" },
+    { number: "-", label: "Daily Active Users" },
+    { number: "-", label: "Generated Palettes" },
     { number: "100%", label: "Free Forever" },
     { number: "24/7", label: "Available" }
   ];
@@ -87,17 +87,17 @@ const LandingPage: React.FC = () => {
   const testimonials = [
     {
       quote: "This tool saved me so much time on my latest project. The color extraction feature is spot-on!",
-      author: "Akiko Yamamoto",
+      author: "Akiko Y.",
       role: "Product Designer"
     },
     {
       quote: "Finally found a color tool that actually works for my needs. Using it daily for all my design work now.",
-      author: "Lucas Silva",
+      author: "Lucas S.",
       role: "Freelance UI Designer"
     },
     {
       quote: "Been looking for something like this for ages. Super intuitive and the patterns feature is good!",
-      author: "Priya Patel",
+      author: "Priya P.",
       role: "Art Director"
     }
   ];
