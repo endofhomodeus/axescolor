@@ -5,14 +5,14 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - SPECTRAUX</title>
+        <title>Privacy Policy - AXESCOLOR</title>
       </Helmet>
       <div className="max-w-3xl mx-auto py-12">
         <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Privacy Policy</h1>
         <div className="prose dark:prose-invert">
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Our Privacy Commitment</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">At SPECTRAUX, we are committed to protecting your privacy. Our color palette generation tool operates entirely in your browser, and we do not collect, store, or process any personal information from our users.</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">At AXESCOLOR, we are committed to protecting your privacy. Our color palette generation tool operates entirely in your browser, and we do not collect, store, or process any personal information from our users.</p>
           </section>
 
           <section className="mb-8">

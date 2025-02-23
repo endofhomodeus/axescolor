@@ -5,14 +5,14 @@ const CookiePolicy: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Cookie Policy - SPECTRAUX</title>
+        <title>Cookie Policy - AXESCOLOR</title>
       </Helmet>
       <div className="max-w-3xl mx-auto py-12">
         <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Cookie Policy</h1>
         <div className="prose dark:prose-invert">
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Essential Cookies Only</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">SPECTRAUX uses only essential cookies that are necessary for the website to function properly. We use a single cookie to remember your dark/light mode preference.</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">AXESCOLOR uses only essential cookies that are necessary for the website to function properly. We use a single cookie to remember your dark/light mode preference.</p>
           </section>
 
           <section className="mb-8">
